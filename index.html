@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5899/5899792.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão</title>
+</head>
+
+<header>
+    <input type="checkbox" name="" id="toggle" class="toggle-btn">
+    <label for="toggle" class="toggle-label"></label>
+</header>
+
+
+<body>
+    <h1>Conversão  </h1>
+
+
+    <label for="reais">Reais R$</label>
+    <input type="number" name="" id="reais">
+    <br>
+
+
+    <!-- <label for="dolar"> dolar ($):</label> -->
+    <!-- <input type="number" name="" id="dolar"> -->
+    <br>
+
+    <button onclick="calcularConversao()"> Calcular </button>
+
+    <p>São Iguais(dolares $): <span id="resultado"></span></p>
+    
+    <script>
+        function calcularConversao(){
+            const reais = document.getElementById('reais').value;
+            // const peso = document.getElementById('dolar').value;
+            const imc = reais / (reais ** 0,5);
+            
+            document.getElementById('resultado').textContent = imc.toFixed(2);
+        }
+
+    </script>
+
+    <footer>Criado Por Gustavo Soares |Gustav</footer>
+
+    <script src="btn.js"></script>
+    
+</body>
+</html>
